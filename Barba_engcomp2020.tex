@@ -1,0 +1,62 @@
+\documentclass[10pt,journal,compsoc]{IEEEtran}
+
+\usepackage{amsmath}
+\usepackage[nocompress]{cite}
+\usepackage{color}
+\usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
+\usepackage{stfloats}
+\usepackage{url}
+\usepackage{multirow}
+
+\definecolor{lightgray}{rgb}{0.95,0.95,0.95}
+
+\usepackage[pdftex]{graphicx}
+\graphicspath{{figures/}}
+\DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+\begin{document}
+
+% title
+\title{}
+% author names and affiliations
+\author{Lorena A. Barba
+\IEEEcompsocitemizethanks{\IEEEcompsocthanksitem Mechanical and Aerospace Engineering,
+the George Washington University, Washington, DC 20052.\protect\\
+% note need leading \protect in front of \\ to get a newline within \thanks as
+% \\ is fragile and will error, could use \hfil\break instead.
+Email: labarba@gwu.edu}% <-this % stops an unwanted space
+%\thanks{Manuscript submitted 2019}
+}
+
+\IEEEtitleabstractindextext{%
+\begin{abstract}
+
+\end{abstract}
+}
+
+% make the title area
+\maketitle
+
+\IEEEraisesectionheading{\section{Introduction}\label{sec:introduction}}
+
+\IEEEPARstart{S}{cience} and engineering undergraduate programs routinely include in their curriculum a basic programming course, often provided as a service course by the local department of computer science. 
+
+
+
+\bigskip
+
+\textbf{Lorena A. Barba} is a professor of mechanical and aerospace engineering at the George Washington University. Her research interests include computational fluid dynamics, biophysics, and high-performance computing. She is co-Editor of the CiSE Reproducible Research Track, Associate Editor for The ReScience Journal, Associate Editor-in-Chief of the Journal of Open Source Software, and Editor-in-Chief of the Journal of Open Source Education. Barba received a PhD in aeronautics from the California Institute of Technology. Contact her at labarba@gwu.edu.
+
+\bibliographystyle{IEEEtran}
+% argument is your BibTeX string definitions and bibliography database(s)
+\bibliography{IEEEabrv}
+%
+% <OR> manually copy in the resultant .bbl file
+%\begin{thebibliography}{1}
+%\bibitem
+%\end{thebibliography}
+
+\end{document}
