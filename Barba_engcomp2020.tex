@@ -5,7 +5,7 @@
 \usepackage{color}
 \usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
 \usepackage{stfloats}
-\usepackage{url}
+\usepackage{hyperref}
 \usepackage{multirow}
 
 \definecolor{lightgray}{rgb}{0.95,0.95,0.95}
@@ -56,7 +56,42 @@ We first developed three learning modules---each adding up to about one universi
 The faculty of the Mechanical and Aerospace Engineering department then approved to create a two-course series in computing, and we used the first two modules for a first-year course in Spring 2019, and started writing two additional learning modules to complete a revised second-year course. 
 We are working with colleagues to develop additional learning modules to use within core engineering courses, aiming to reinforce the ability of students to use computational practices in their discipline. 
 
+\section{Key concepts and design principles}
 
+Some key concepts and design principles in the \emph{Engineers Code} series of learning modules are: 
+(1) the idea of ``computable content'': educational content made powerfully interactive via compute engines in the learning platform; 
+(2) the idea of open pedagogy: reflecting in the teaching practice the ethos and practices of open source software; 
+(3) modularization: creating stackable learning modules that break-up the standard ``course'' format; 
+(4) harnessing the worked-example effect: empirically shown to be superior to problem-solving for novice learners; 
+(5) using live-coding to structure active-learning class experiences; and
+(6) guiding learners to document their own work. 
+
+Our chosen learning platform is Jupyter: a browser-based interactive computing environment, concretized in a document format that seamlessly interleaves code with text-based and multi-media content: the Jupyter Notebook. 
+Each learning module consists of four or five fully narrated Jupyter notebooks (the lessons), and student assignments also prepared and submitted as Jupyter notebooks.
+I started using Jupyter for teaching in 2013 (when it still had not adopted this name). 
+Based on a practical module used in the classroom in my Computational Fluid Dynamics (CFD) course (taught from 2010 to 2013 at Boston University), my first series of fully narrated notebooks is ``CFD Python: the 12 steps to Navier-Stokes equations'' \cite{BarbaForsyth2018}. 
+Based on the experience creating and using the CFD Python learning module, and following a similar approach in later courses, we adopted this basic design pattern for developing lessons using computable content:
+
+\begin{enumerate}
+\item Break it down into small steps
+\item Chunk small steps into bigger steps
+\item Add narrative and connect
+\item Link out to documentation
+\item Interleave easy exercises
+\item Spice with challenge questions/tasks
+\item Publish openly online
+\end{enumerate}
+
+The \emph{Engineers Code} series of lessons are published as Open Educational Resources (OER): anyone can access, reuse, revise, and redistribute the materials. 
+The idea of creating educational materials that are made to be reused goes back twenty five years, and led to the development of content licenses like Creative Commons. 
+Recurring topics in the conversations around OER are the high cost of textbooks, increasing access to cotent (for worldwide learners), questions of copyright and licenses, and values around altruism and the public good. 
+But arguably OER have not been transformational: various surveys show that faculty for the most part still require commercial textbooks, and have little awareness of OER alternatives. 
+Even if the open education movement was inspired by open source software, it missed some key features: open development, networked collaboration, community, and a value-based framework. 
+In open-source development, we cherish our \emph{productive freedom}: the freedom to work and collaborate by our own conventions, side-step the restrictions of copyright law by attaching a license to our products, and prioritize access, distribution, collaboration. 
+In OER development, the narrative is often about \emph{creation} of content, and \emph{adoption} by others. There is the Author, and there is the Adopter, or User. 
+Although Creative-Commons licenses are meant for reuse and remix, in practice the emphasis is on sharing for reuse ``as is.'' 
+(Consider for example the MIT Open Course Ware: faculty create their course materials and deposit them for free access; users cannot become contributors.) 
+Deliberately embracing the ethos and practice of open source software may not only lead to greater reuse, but inspire students to more collaboration.
 
 \bigskip
 
