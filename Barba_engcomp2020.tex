@@ -225,6 +225,8 @@ Geometrical interpretation of singular value decomposition (SVD). While eigendec
 
 ``Jupyter first'' alludes to the idea of developing a course first as a set of Jupyter notebooks, then building both an online course and an on-campus learning experience based on those notebooks. 
 For the \emph{Engineers Code} series, I am creating an online mini-course for each module,  in the format of a ``massive open online course'' (MOOC), using the Open edX course platform. 
+The site is found at \url{http://openedx.seas.gwu.edu}. 
+
 Open edX is a full-featured open-source platform for online courses, used by millions of learners via the edX consortium, large MOOC platforms abroad (France, China, Spain, and others), and institutional deployments. 
 It allows for third-party extensions with its XBlock specification. 
 With outside technical partners, we developed ways to integrate both content and assessments based on Jupyter into an online course in Open edX. 
@@ -237,6 +239,17 @@ One can interleave short videos and graded sub-sections using the built-in probl
 Our course development workflow is the product of several years of refinement, and applies evidence-based instructional design. 
 Combined with modern pedagogies used in the classroom, like active learning via live coding, an instructor can create learning experiences that are effective on campus and online. 
 
+\textbf{Summary of the Jupyter XBlocks:}
+
+\emph{Jupyter Notebook Viewer XBlock:} From any public Jupyter notebook (e.g., in a public repository on GitHub), pull content into a course learning sequence using the notebook URL (dynamic content). 
+Use optional start and end marks (any string from the first cell to include, and the first cell to exclude) to break long notebook into ?unit-sized? parts. 
+This allows course authors to develop their course content as Jupyter notebooks, and to build learning sequences reusing that content, without duplication. 
+It also has the added benefit that the development of the material can be hosted on a version-controlled repository. (Open edX, itself, doesn't provide version control of course content.)
+The code repository for the XBlock is at \url{https://github.com/ibleducation/jupyter-viewer-xblock}, and is open source under a BSD3 license.
+
+\emph{Graded Jupyter Notebook XBlock:} Create an assignment using the \texttt{nbgrader} Jupyter extension, then insert a graded sub-section in Open edX that will deliver this assignment (as a download), auto-grade the student's uploaded solution, and record the student's score in the gradebook. 
+The XBlock instantiates a Docker container with all the required dependencies, runs \texttt{nbgrader} on the student-uploaded notebook, and displays immediate feedback to the student in the form of a score table. 
+The code repository for the XBlock is at \url{https://github.com/ibleducation/jupyter-edx-grader-xblock}, and is open source under a BSD3 license.
 
 \bigskip
 
