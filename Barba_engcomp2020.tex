@@ -7,6 +7,7 @@
 \usepackage{stfloats}
 \usepackage{hyperref}
 \usepackage{multirow}
+\usepackage{enumitem}
 
 \definecolor{lightgray}{rgb}{0.95,0.95,0.95}
 
@@ -111,6 +112,124 @@ when learners generating responses perform better than learners in a presentatio
 Chen et al.\ \cite{chen2015worked} concluded that ``worked example effect occurs for complex, high-element interactivity materials that impose a heavy working memory load whereas the generation effect is applicable for low-element interactivity materials.''
 Thus, strong guidance is best for novice learners dealing with complex materials; as students become more expert in the subject, guidance can be reduced in favor of discovery based learning. 
 Needless to say, learning to program imposes a high cognitive load, suggesting that inexperienced trainees will benefit from worked-example effects. 
+Each lesson in our collection aims to harness this effect by breaking down a computational problem into atomic steps, providing a detailed narrative and documentation of those steps, and peppering the narrative with low-stakes exercises for students. 
+
+In the classroom, we adopt the method referred to in open source communities as \emph{live coding}. 
+The instructor projects an interactive computing session (a draft Jupyter notebook), and demonstrates live the problem-solving sequence by typing every command, while students follow along in their own interactive session. 
+Naturally, mistakes happen, and the instructor has the opportunity to vocalize their corrections to these mistakes, modeling a process (debugging) that novices can be frustrated by. 
+Students can mistype, or decide to try a small change, and encounter different errors during class. To help them, the instructor is aided by in-class learning assistants: undergraduate students who have recently completed the course. 
+We use the familiar Software Carpentry ``Post-It Notes'' method: all students are handed one pink and one green sticky note. 
+When they have a problem or a question, they stick the pink note on their computer monitor (and a learning assistant can come to them); when they are finished with a class exercise, they stick the green note on their monitor (and the instructor can get a feel for the room with one look around).
+The live-coding approach, supported by in-class learning assistants, leads to an active learning format that works. 
+Active learning is known to be superior to lectures both in terms of comprehension and recollection (memory) \cite{freeman2014active}.
+Finally, students are encouraged to take their in-class notes in a new Jupyter notebook as a draft that they can continue adding to when they self-study. 
+The goal is to model the process of creating their own computational narratives, and becoming self-directed in their future applications of computing
+
+\section{The four learning modules completed up to this point}
+
+\subsection{Module 1: Get data off the ground with Python}
+This first module assumes no prior coding experience, so the first three lessons are focused on creating a foundation with Python programming constructs using essentially no mathematics. 
+The fourth lesson introduces the basic data structure in scientific computing: arrays. 
+The final lesson is a worked example of linear regression with real data.
+
+\begin{description}[style=unboxed]
+
+\item[Lesson 1: Interacting with Python]---
+Background: What is Python? Idea of interpreted vs. compiled language. Why use Python? It is a general-purpose and high-productivity language. Getting started: interactive Python (IPython). Using Python as a calculator. New concepts: function, string, variables, assignment, type, special variables (True, False, None). Supported operations, logical operations. Reading error messages.
+
+\item[Lesson 2: Play with data in Jupyter]---
+What is Jupyter? Working with Jupyter. Playing with Python strings: assignment, indexing, slicing. String methods: count, find, index, strip, startswith, split. Play with Python lists: assignment, nested lists, indexing, slicing. String methods: append, index. List membership. Iteration with for-statements. Conditionals.
+
+\item[Lesson 3: Strings and lists in action]---
+A full example using what you learned in lessons 1 and 2: playing with a text file containing the MAE Bulletin (list of courses with their numbers, description, pre-requisites). Reading a data from a file. Cleaning and organizing text data.
+
+\item[Lesson 4: Play with NumPy arrays]---
+Two of the most important libraries for scientific computing with Python: NumPy and Matplotlib. Importing libraries. NumPy functions to create arrays: linspace, ones, zeros, empty, copy. Array operations. Multidimensional arrays. Performance advantage of arrays over lists. Drawing 2D line plots of array data.
+
+\item[Lesson 5: Linear regression with real data]---
+A full worked example using real data of earth temperature over time. Step 1: reading data from a file. Step 2: plotting the data; making beautiful plots. Step 3: least-squares linear regression. Step 4: applying linear regression using NumPy. Split regression.
+
+\end{description}
+
+\subsection{Module 2: Take off with Stats in Python}
+This learning module builds from a foundation in Python programming to develop data practices and computational problem-solving. 
+Students learn to handle data programmatically, reading data from files, cleaning and organizing data, and performing exploratory data analysis. 
+They use real data, learn to make pretty data visualizations, and gain insight from data.
+
+\begin{description}[style=unboxed]
+
+\item[Lesson 1: Cheers! Stats with beers]---
+Exploratory analysis using a data set of canned craft beers in the US. Introduces the pandas library and its data types: Data Frames and Series. Use pandas to read a data file, extract selected columns, and remove null values. Descriptive statistics: measures of central tendency and variability. Distribution plots: histograms with Matplotlib. Comparing with a normal distribution.
+
+\item[Lesson 2: Seeing stats in a new light]---
+Continuing with the data set of canned craft beers, this lesson focuses on visualizing statistics. For quantitative data: histograms and box plots; for categorical data: bar plots. Visualizing multiple data with scatter plots and bubble charts.
+
+\item[Lesson 3: Lead in lipstick]---
+A full worked example using what you learned in lessons 1 and 2: using data from studies by the US Food and Drug Administration on the lead content in lipstick, we fact-check alarming news headlines. Based on Prof. Kristin Sainani's lecture, "Exploring real data: lead in lipstick," of her Stanford Online course "Statistics in Medicine.?
+
+\item[Lesson 4: Life expectancy and wealth]---
+A deeper dive into pandas for data analysis, using data of life expectancy and gross-domestic product (income) per capita over time, for various countries across the world. Grouping data for analysis and dataframe manipulation.
+
+\end{description}
+
+\subsection{Module 3: Tour the Dynamics of Change and Motion with Python}
+This module builds from a foundation in Python programming to develop modeling and simulation practices, and computational problem-solving. 
+Students learn to capture motion from images and videos, to compute velocity and acceleration from position data, to obtain velocity and position from accelerometer data, and to study differential models of mechanical vibrations.
+
+\begin{description}[style=unboxed]
+
+\item[Lesson 1: Catch things in motion]---
+Working with images and videos in Python using imageio. Interactive Matplotlib figures in the notebook, and capturing mouse clicks on images for digitizing an object's position. Computing velocity and acceleration from position captures: a falling ball, and projectile motion. Computing numerical derivatives using differences. Free-fall acceleration from real data.
+
+\item[Lesson 2: Step to the future]---
+Computing velocity and position from accelerometer data: a roller-coaster ride. Using the subplot() function go draw more than one plot in the same figure. Euler's method for initial-value problems, and Taylor expansion showing first-order accuracy. The second-order differential model for an object in free fall written as two first-order differential equations, leading to a vector form. General design of a code to solve ordinary differential equations (ODEs). Application to free fall of a tennis ball and comparison with experimental data. Improved model accounting for air resistance.
+
+\item[Lesson 3: Get with the oscillations]---
+Differential model of a spring-mass system without friction: state vector and system in vector form. Amplitude growth with Euler's method on oscillatory systems, and the fix: Euler-Cromer method (semi-implicit Euler). Numerically observed order of accuracy using a convergence plot: numerical error with different time increments, ?t. Modified Euler's method, and observed order of accuracy.
+
+\item[Lesson 4: Bird's-eye view of mechanical vibrations]---
+General spring-mass systems with damping and a driving force, revealing a variety of behaviors. Presents a powerful new method to study dynamical systems based on visualizing direction fields and trajectories in the phase plane.
+
+\end{description}
+
+\subsection{Module 4: Land on Vector Spaces with Python}
+This module applies Python and core numerical libraries (NumPy, SymPy, Matplotlib) to explore the foundations of linear algebra, with a geometrical and practical approach. 
+Students learn to view matrices as linear transformations of vectors, and develop intuition about their role in linear systems of equations. 
+Playing with transformations, students understand eigenvalues and eigenvectors, and discover matrix decomposition. 
+We use Python to compute all the eigenthings and apply them to population models in ecology, Markov Chains, and the Google Page Rank algorithm. 
+Students learn about singular-value decomposition and its application to image compression, least squares problems, and linear regression.
+
+\begin{description}[style=unboxed]
+\item[Lesson 1: Transform all the vectors]---
+What is a vector? The physicist's view versus the computer scientist's view. Fundamental vector operations: visualizing vector addition and multiplication by a scalar. Intuitive presentation of basis vectors, linear combination and span. What is a matrix? A matrix as a linear transformation mapping a vector in one space, to another space. Visualizing linear transformations. Matrix-vector multiplication: a linear combination of the matrix columns. Some special transformations: rotation, shear, scaling. Matrix-matrix multiplication: a composition of two linear transformations. Idea of inverse of a matrix as a transformation that takes vectors back to where they came from.
+
+\item[Lesson 2: The matrix is everywhere]---
+A matrix is a linear transformation? visualize it. Norm of a vector. A matrix maps a circle to an ellipse? visualize it. A vector that doesn't change direction after a linear transformation is an eigenvector of the matrix. A matrix is a system of equations? visualize it (row perspective). Inconsistent and underdetermined systems. A matrix is a change of basis? visualize it. An inverse of that matrix will change the vector's coordinates back to the original basis. Matrices in three-dimensional space: linear transformations in 3D; 3D systems of linear equations; dimension and rank. Visualize the transformations of rank-deficient matrices.
+
+\item[Lesson 3: Eigenvectors for the win]---
+Geometry of eigendecomposition. Eigenvectors revisited: a matrix transforms a circle to an ellipse, whose semimajor and semiminor axes align with the eigenvectors. Composition of scaling transformation and a rotation transformation: not enough! Complete the composition. Symmetric matrices, orthogonal eigenvectors. Eigendecomposition in general. Diagonalizable matrices. Similar matrices. Eigendecomposition is similarity via a change of basis. Compute eigenthings in Python, using NumPy or SymPy. Eigenvalues in ecology: matrix population models. Markov chains. PageRank algorithm.
+
+\item[Lesson 4: Stick to the essentials: SVD]---
+Geometrical interpretation of singular value decomposition (SVD). While eigendecomposition is a combination of change of basis and stretching, SVD is a combination of rotation and stretching, which can be treated as a generalization of eigendecomposition. Example: SVD in image compression. A 2D image can be represented as an array where each pixel is an element of the array. By applying SVD and dropping smaller singular values, we can reconstruct the original image at a lower computational and memory cost. Non-square matrices: SVD in general; pseudo-inverse. Application to linear least squares; linear regression with SVD.
+
+\end{description}
+
+\section{Hybrid to online with Jupyter-first course design}
+
+``Jupyter first'' alludes to the idea of developing a course first as a set of Jupyter notebooks, then building both an online course and an on-campus learning experience based on those notebooks. 
+For the \emph{Engineers Code} series, I am creating an online mini-course for each module,  in the format of a ``massive open online course'' (MOOC), using the Open edX course platform. 
+Open edX is a full-featured open-source platform for online courses, used by millions of learners via the edX consortium, large MOOC platforms abroad (France, China, Spain, and others), and institutional deployments. 
+It allows for third-party extensions with its XBlock specification. 
+With outside technical partners, we developed ways to integrate both content and assessments based on Jupyter into an online course. 
+We have contributed two XBlocks to build courses based on Jupyter: the Viewer, and a Jupyter Grader for auto-graded student assignments (both released as open source). 
+With the Jupyter Viewer Xblock, a course designer can build learning sequences with content pulled dynamically from a public Jupyter notebook (e.g., on GitHub). 
+Jupyter-based courses can be written using an open development model (like any open-source software project), collaboratively and under version control. 
+Once the material is ready, the course builder can create a MOOC-style course in Open edX, pulling the content from the notebooks without duplication in the course platform. 
+(Note that Open edX has no concept of version control.) 
+One can interleave short videos and graded sub-sections using the built-in problem types, or using the Graded Jupyter XBlock. 
+Our course development workflow is the product of several years of refinement, and applies evidence-based instructional design. 
+Combined with modern pedagogies used in the classroom, like active learning via live coding, an instructor can create learning experiences that are effective on campus and online. 
+
 
 \bigskip
 
