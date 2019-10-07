@@ -48,10 +48,10 @@ Regardless of the programming language used, one common approach for teaching no
 Less common---even though it is known to be effective---is to teach programming \emph{in context}. 
 The classic example is the media-computing course introduced nearly two decades ago at the Georgia Institute of Technology (for liberal arts, architecture, and management/business majors) \cite{guzdial2003media,guzdial2005design}. 
 Evaluation efforts on that multi-year curricular innovation support the idea that context-based teaching of programming increases student motivation and success \cite{forte2005motivation,guzdial2013exploring}. 
-(It also reduced the success gender gap.) 
+(In the Georgia Tech experience, it also reduced the success gender gap.) 
 A more recent effort to introduce contextualized computing education in engineering found that it was effective in enabling students to apply computational practices to continue learning in their discipline \cite{magana2016case}. 
 In view of their observations, the authors recommended integrating context-based computing early and often in the engineering curriculum. 
-In this paper, I describe an initiative to develop a series of learning modules meant to integrate computing in the undergraduate engineering curriculum. 
+In this paper, I describe an initiative to develop a series of learning modules aimed at integrating computing in the undergraduate engineering curriculum. 
 The modules adopt the context-based format for teaching programming, and are also designed to be re-usable, and shared under standard public licenses (CC-BY for content and BSD-3 for code). 
 We first developed three learning modules---each adding up to about one university credit of work---and taught a second-year engineering course based on this content  in Fall 2017 and Fall 2018. 
 The faculty of the Mechanical and Aerospace Engineering department then approved to create a two-course series in computing, and we used the first two modules for a first-year course in Spring 2019, and started writing two additional learning modules to complete a revised second-year course. 
@@ -88,10 +88,10 @@ The idea of creating educational materials that are made to be reused goes back 
 Recurring topics in the conversations around OER are the high cost of textbooks, increasing access to content (for worldwide learners), questions of copyright and licenses, and values around altruism and the public good. 
 But arguably OER have not been transformational: various surveys show that faculty for the most part still require commercial textbooks, and have little awareness of OER alternatives. 
 Even if the open education movement was inspired by open source software, it missed some key features: open development, networked collaboration, community, and a value-based framework. 
-In open-source development, we cherish our \emph{productive freedom}: the freedom to work and collaborate by our own conventions, side-step the restrictions of copyright law by attaching a license to our products, and prioritize access, distribution, collaboration. 
+In open-source development, we cherish our \emph{productive freedom}: the freedom to work and collaborate by our own conventions, side-step the restrictions of copyright law by attaching a license to our products, and prioritize access, distribution, and collaboration. 
 In OER development, the narrative is often about \emph{creation} of content, and \emph{adoption} by others. There is the Author, and there is the Adopter, or User. 
 Although Creative-Commons licenses are meant for reuse and remix, in practice the emphasis is on sharing for reuse ``as is.'' 
-(Consider for example the MIT Open Course Ware: faculty create their course materials and deposit them for free access; users cannot become contributors.) 
+(Consider for example the MIT Open Course Ware initiative: faculty create their course materials and deposit them for free access; users cannot become contributors.) 
 Deliberately embracing the ethos and practice of open source software may not only lead to greater reuse, but could inspire students to more collaboration.
 
 Modularization of the content is also aimed at increasing reuse. 
@@ -107,17 +107,17 @@ Each module, in turn, consists of a handful of lessons written as a Jupyter note
 And each lesson develops a topic through a scaffolded design that takes advantage of the \emph{worked-example effect}: one of the best known and most widely studied of the cognitive load effects. 
 The effect is positive when providing full guidance on how to solve a problem results in better student performance than problem-solving conditions with no guidance. 
 Many studies have shown significant learning improvements with worked examples, compared with free-form problem-solving, for novices learning complex topics.
-Its opposite is called generation effect: 
+The opposite is called generation effect: 
 when learners generating responses perform better than learners in a presentation setting that provides an answer. 
-Chen et al.\ \cite{chen2015worked} concluded that ``worked example effect occurs for complex, high-element interactivity materials that impose a heavy working memory load whereas the generation effect is applicable for low-element interactivity materials.''
+Chen et al.\ \cite{chen2015worked} concluded that the ``worked example effect occurs for complex, high-element interactivity materials that impose a heavy working memory load whereas the generation effect is applicable for low-element interactivity materials.''
 Thus, strong guidance is best for novice learners dealing with complex materials; as students become more expert in the subject, guidance can be reduced in favor of discovery based learning. 
 Needless to say, learning to program imposes a high cognitive load, suggesting that inexperienced trainees will benefit from worked-example effects. 
 Each lesson in our collection aims to harness this effect by breaking down a computational problem into atomic steps, providing a detailed narrative and documentation of those steps, and peppering the narrative with low-stakes exercises for students. 
 
 In the classroom, we adopt the method referred to in open source communities as \emph{live coding}. 
-The instructor projects an interactive computing session (a draft Jupyter notebook), and demonstrates live the problem-solving sequence by typing every command, while students follow along in their own interactive session. 
-Naturally, mistakes happen, and the instructor has the opportunity to vocalize their corrections to these mistakes, modeling a process (debugging) that novices can be frustrated by. 
-Students can mistype, or decide to try a small change, and encounter different errors during class. To help them, the instructor is aided by in-class learning assistants: undergraduate students who have recently completed the course. 
+The instructor projects an interactive computing session (a draft Jupyter notebook), and demonstrates live the problem-solving sequence by typing and executing every command, while students follow along in their own interactive session. 
+Naturally, mistakes happen, and the instructor has the opportunity to vocalize the corrections to these mistakes, modeling a process (debugging) that novices can be frustrated by when working alone. 
+Students following along in class can mistype, or decide to try a small change, and encounter different errors during class. To help them, the instructor is aided by in-class learning assistants: undergraduate students who have recently completed the course. 
 We use the familiar Software Carpentry ``Post-It Notes'' method: all students are handed one pink and one green sticky note. 
 When they have a problem or a question, they stick the pink note on their computer monitor (and a learning assistant can come to them); when they are finished with a class exercise, they stick the green note on their monitor (and the instructor can get a feel for the room with one look around).
 The live-coding approach, supported by in-class learning assistants, leads to an active learning format that works. 
@@ -126,9 +126,16 @@ Finally, students are encouraged to take their in-class notes in a new Jupyter n
 The goal is to model the process of creating their own computational narratives, and becoming self-directed in their future applications of computing
 
 \section{The four learning modules completed up to this point}
+As of this writing, four learning modules are complete, and shared on GitHub under CC-BY and BSD-3 licenses. 
+The entry point repository is at \url{https://github.com/engineersCode/EngComp}. 
+We have a fifth module under development, on the topic of Fourier analysis. 
+Additional learning modules are planned, for supplementing core engineering courses. 
+The first three modules have been tested in the classroom three times. 
+Also, the first module was adopted by a team of data services librarians at the GW Library to conduct short, intensive Python workshops over three or four days. 
+The fourth module (on linear algebra) was used once for leading a live tutorial at the SciPy Conference in July 2019 (the video of this tutorial is available at \url{https://youtu.be/4-P0gptDT40}).
 
 \subsection{Module 1: Get data off the ground with Python}
-This first module assumes no prior coding experience, so the first three lessons are focused on creating a foundation with Python programming constructs using essentially no mathematics. 
+The first module assumes no prior coding experience, so the first three lessons are focused on creating a foundation with Python programming constructs using essentially no mathematics. 
 The fourth lesson introduces the basic data structure in scientific computing: arrays. 
 The final lesson is a worked example of linear regression with real data.
 
@@ -220,10 +227,10 @@ Geometrical interpretation of singular value decomposition (SVD). While eigendec
 For the \emph{Engineers Code} series, I am creating an online mini-course for each module,  in the format of a ``massive open online course'' (MOOC), using the Open edX course platform. 
 Open edX is a full-featured open-source platform for online courses, used by millions of learners via the edX consortium, large MOOC platforms abroad (France, China, Spain, and others), and institutional deployments. 
 It allows for third-party extensions with its XBlock specification. 
-With outside technical partners, we developed ways to integrate both content and assessments based on Jupyter into an online course. 
+With outside technical partners, we developed ways to integrate both content and assessments based on Jupyter into an online course in Open edX. 
 We have contributed two XBlocks to build courses based on Jupyter: the Viewer, and a Jupyter Grader for auto-graded student assignments (both released as open source). 
-With the Jupyter Viewer Xblock, a course designer can build learning sequences with content pulled dynamically from a public Jupyter notebook (e.g., on GitHub). 
-Jupyter-based courses can be written using an open development model (like any open-source software project), collaboratively and under version control. 
+With the Jupyter Viewer Xblock, a course designer can build learning sequences with content pulled dynamically from a public Jupyter notebook (e.g., on a GitHub repository). 
+Jupyter-first courses can be written using an open development model (like any open-source software project), collaboratively and under version control. 
 Once the material is ready, the course builder can create a MOOC-style course in Open edX, pulling the content from the notebooks without duplication in the course platform. 
 (Note that Open edX has no concept of version control.) 
 One can interleave short videos and graded sub-sections using the built-in problem types, or using the Graded Jupyter XBlock. 
