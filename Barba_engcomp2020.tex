@@ -34,7 +34,7 @@ Email: labarba@gwu.edu}% <-this % stops an unwanted space
 
 \IEEEtitleabstractindextext{%
 \begin{abstract}
-Although undergraduate programs in science and engineering include at least one course in basic programming, this is seldom presented in a contextualized format, where computing is a tool for thinking and learning about topics in the discipline. 
+Undergraduate programs in science and engineering include at least one course in basic programming, but  seldom presented in a contextualized format, where computing is a tool for thinking and learning in the discipline. 
 We have created a series of learning modules to embed computing in engineering education, and share this content under permissive public licenses. 
 The modules are created as a set of lessons using Jupyter notebooks, and complemented by online courses in the Open edX platform, using new integrations we developed. 
 Learning sequences in the online course pull content dynamically from public Jupyter notebooks and assessments are auto-graded on-the-fly, using our Jupyter Viewer and Jupyter Grader third-party extensions for Open edX (XBlocks). 
@@ -139,7 +139,7 @@ The first three modules have been tested in the classroom three times.
 Also, the first module was adopted by a team of data services librarians at the GW Library to conduct short, intensive Python workshops over three or four days. 
 The fourth module (on linear algebra) was used once for leading a live tutorial at the SciPy Conference in July 2019 (the video of this tutorial is available at \url{https://youtu.be/4-P0gptDT40}).
 
-\subsection{Module 1: Get data off the ground with Python}
+\subsection*{Module 1: Get data off the ground with Python}
 The first module assumes no prior coding experience, so the first three lessons are focused on creating a foundation with Python programming constructs using essentially no mathematics. 
 The fourth lesson introduces the basic data structure in scientific computing: arrays. 
 The final lesson is a worked example of linear regression with real data.
@@ -163,7 +163,7 @@ A full worked example using real data of earth temperature over time. Step 1: re
 
 \end{description}
 
-\subsection{Module 2: Take off with Stats in Python}
+\subsection*{Module 2: Take off with Stats in Python}
 This learning module builds from a foundation in Python programming to develop data practices and computational problem-solving. 
 Students learn to handle data programmatically, reading data from files, cleaning and organizing data, and performing exploratory data analysis. 
 They use real data, learn to make pretty data visualizations, and gain insight from data.
@@ -184,7 +184,7 @@ A deeper dive into pandas for data analysis, using data of life expectancy and g
 
 \end{description}
 
-\subsection{Module 3: Tour the Dynamics of Change and Motion with Python}
+\subsection*{Module 3: Tour the Dynamics of Change and Motion with Python}
 This module builds from a foundation in Python programming to develop modeling and simulation practices, and computational problem-solving. 
 Students learn to capture motion from images and videos, to compute velocity and acceleration from position data, to obtain velocity and position from accelerometer data, and to study differential models of mechanical vibrations.
 
@@ -204,7 +204,7 @@ General spring-mass systems with damping and a driving force, revealing a variet
 
 \end{description}
 
-\subsection{Module 4: Land on Vector Spaces with Python}
+\subsection*{Module 4: Land on Vector Spaces with Python}
 This module applies Python and core numerical libraries (NumPy, SymPy, Matplotlib) to explore the foundations of linear algebra, with a geometrical and practical approach. 
 Students learn to view matrices as linear transformations of vectors, and develop intuition about their role in linear systems of equations. 
 Playing with transformations, students understand eigenvalues and eigenvectors, and discover matrix decomposition. 
@@ -230,7 +230,7 @@ Geometrical interpretation of singular value decomposition (SVD). While eigendec
 
 ``Jupyter first'' alludes to the idea of developing a course first as a set of Jupyter notebooks, then building both an online course and an on-campus learning experience based on those notebooks. 
 For the \emph{Engineers Code} series, I am creating an online mini-course for each module,  in the format of a ``massive open online course'' (MOOC), using the Open edX course platform. 
-The site is found at \url{http://openedx.seas.gwu.edu}. 
+The site is found at \url{http://openedx.seas.gwu.edu}, and anyone can register and enroll in the online courses, at no cost. 
 
 Open edX is a full-featured open-source platform for online courses, used by millions of learners via the edX consortium, large MOOC platforms abroad (France, China, Spain, and others), and institutional deployments. 
 It allows for third-party extensions with its XBlock specification. 
@@ -244,7 +244,9 @@ One can interleave short videos and graded sub-sections using the built-in probl
 Our course development workflow is the product of several years of refinement, and applies evidence-based instructional design. 
 Combined with modern pedagogies used in the classroom, like active learning via live coding, an instructor can create learning experiences that are effective on campus and online. 
 
-\textbf{Summary of the Jupyter XBlocks:}
+\bigskip
+
+\noindent \textbf{Summary of the Jupyter XBlocks:}
 
 \emph{Jupyter Notebook Viewer XBlock:} From any public Jupyter notebook (e.g., in a public repository on GitHub), pull content into a course learning sequence using the notebook URL (dynamic content). 
 Use optional start and end marks (any string from the first cell to include, and the first cell to exclude) to break long notebook into ?unit-sized? parts. 
@@ -255,6 +257,37 @@ The code repository for the XBlock is at \url{https://github.com/ibleducation/ju
 \emph{Graded Jupyter Notebook XBlock:} Create an assignment using the \texttt{nbgrader} Jupyter extension, then insert a graded sub-section in Open edX that will deliver this assignment (as a download), auto-grade the student's uploaded solution, and record the student's score in the gradebook. 
 The XBlock instantiates a Docker container with all the required dependencies, runs \texttt{nbgrader} on the student-uploaded notebook, and displays immediate feedback to the student in the form of a score table. 
 The code repository for the XBlock is at \url{https://github.com/ibleducation/jupyter-edx-grader-xblock}, and is open source under a BSD3 license.
+
+\section{Evaluation}
+
+We have some limited evaluation of the learning modules to report, based on student surveys conducted independently of the instructor. 
+Our application to the Institutional Review Board (IRB) in the Fall 2017 received an exempt determination.
+During the first semester-long course using the (first three) learning modules, we carried out a qualitative study on how a new OER medium, Jupyter Notebooks, may (or may not) impact attitudes of undergraduate engineering students toward sharing and openness. 
+Various research efforts in the last decade have focused on the impact on student outcomes from using OER. 
+We were interested in whether our use of Jupyter, a new genre for OER, may also influence students in their attitudes and capacities for collaboration, community involvement, and open practices. 
+During classroom discussions, we often emphasized the open-source nature of the tools we used, and promoted the idea that students could adopt these tools for any initiatives, during and after their studies. 
+Out of a cohort of 52 students that semester (Fall 2017), 16 voluntarily answered a survey, and six agreed to be interviewed by a member of staff in the GW eDesign unit. 
+The survey asked students their opinion about the online nature of the course materials, compared with traditional textbooks: 9 out of 16 students said they preferred the online presentation, 3 said they liked it less (3 had no preference, one did not answer). 
+The pre-survey also aimed to sample a baseline of attitudes toward sharing and openness, via an open-ended question. 
+Students' answers reflected equally pro-sharing and anti-sharing attitudes, the latter mostly referring to others taking ``credit'' for their work. 
+Certain cultural barriers persist and inhibit openness, it seems: some students' expectation of having a textbook, and a culture of competition and fixation on grades. 
+We concluded that a single semester-long course is not enough time to make a change in culture. 
+Open educational practices should be threaded through several courses, and start early. 
+Collaboration with other instructors is needed to reinforce ideas, skills, attitudes across more than one course.
+
+In the Spring 2019 semester, the introductory modules were taught as a new first-year course (as part of a two-course series).
+Quantitative evaluation with this cohort targeted students' perceived gains in computing skills, and changes in attitudes towards coding. 
+Out of 48 students taking the course, 23 responded to a survey (69\% male and 31\% female). 
+At the end of the course, the responses to ``How prepared are you for learning to code? '' increased from an average of 5.4 to 7.4 (on a 0--10 scale). 
+The survey also asked several questions on perceptions about using coding skills after graduation, most of which displayed a modest increase. 
+On the prompt ``I plan to use coding in my career after graduation,'' the average of responses increased from 6.2 to 7.3. 
+The evaluation is modest, but our focus has not been to conduct education research, but rather to create the learning materials according to our design specifications, and to develop complementary technology (Jupyter viewer and auto-grader XBlocks) to provide a blended learning experience.
+
+\section*{Acknowledgements}
+
+This work received support from grant \#1730170  of the Office of Advanced Cyberinfrastructure (OAC), National Science Foundation. 
+The student surveys and interviews during Fall 2017 were conducted by Tara Lifland, then an instructional designer at the  George Washington University eDesign Shop and \href{http://openedgroup.org/fellowship}{OER Research Fellow} of the Open Education Group. 
+The surveys during the Spring 2019 were conducted by Prof. Ryan Watkins, from the GW School of Graduate Education and Human Development. 
 
 \bigskip
 
