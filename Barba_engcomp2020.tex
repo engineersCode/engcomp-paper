@@ -91,7 +91,7 @@ Based on the experience creating and using the CFD Python learning module, and f
 The \emph{Engineers Code} series of lessons are published as Open Educational Resources (OER): anyone can access, reuse, revise, and redistribute the materials. 
 The idea of creating educational materials that are made to be reused goes back twenty five years, and led to the development of content licenses like Creative Commons. 
 Recurring topics in the conversations around OER are the high cost of textbooks, increasing access to content (for worldwide learners), questions of copyright and licenses, and values around altruism and the public good. 
-But arguably OER have not been transformational: various surveys show that faculty for the most part still require commercial textbooks, and have little awareness of OER alternatives. 
+But arguably OER have not been transformational: various surveys show that faculty for the most part still require that students purchase commercial textbooks, and have little awareness of OER alternatives. 
 Even if the open education movement was inspired by open source software, it missed some key features: open development, networked collaboration, community, and a value-based framework. 
 In open-source development, we cherish our \emph{productive freedom}: the freedom to work and collaborate by our own conventions, side-step the restrictions of copyright law by attaching a license to our products, and prioritize access, distribution, and collaboration. 
 In OER development, the narrative is often about \emph{creation} of content, and \emph{adoption} by others. There is the Author, and there is the Adopter, or User. 
@@ -137,12 +137,12 @@ We have a fifth module under development, on the topic of Fourier analysis.
 Additional learning modules are planned, for supplementing core engineering courses. 
 The first three modules have been tested in the classroom three times. 
 Also, the first module was adopted by a team of data services librarians at the GW Library to conduct short, intensive Python workshops over three or four days. 
-The fourth module (on linear algebra) was used once for leading a live tutorial at the SciPy Conference in July 2019 (the video of this tutorial is available at \url{https://youtu.be/4-P0gptDT40}).
+The fourth module (on linear algebra) was used once for leading a live tutorial at the SciPy Conference in July 2019 (the video of this tutorial is available at \url{https://youtu.be/4-P0gptDT40}), and once more in a classroom setting during Fall 2019 (with second-year engineering students).
 
 \subsection*{Module 1: Get data off the ground with Python}
-The first module assumes no prior coding experience, so the first three lessons are focused on creating a foundation with Python programming constructs using essentially no mathematics. 
-The fourth lesson introduces the basic data structure in scientific computing: arrays. 
-The final lesson is a worked example of linear regression with real data.
+The first module assumes no prior coding experience, so the first three lessons are focused on creating a foundation with Python programming constructs, with minimal and basic mathematical content (to spare cognitive load). 
+The fourth lesson introduces the basic data structure in scientific computing: arrays; the mathematics content is kept at high-school level.
+The final lesson is a worked example of linear regression with real data, and contains some calculus-based content.
 
 \begin{description}[style=unboxed]
 
@@ -247,11 +247,12 @@ Combined with modern pedagogies used in the classroom, like active learning via 
 \bigskip
 
 \noindent \textbf{Summary of the Jupyter XBlocks:}
-
+Following is a short description of the instructor's experience building a Jupyter-based course in Open edX using our XBlocks:
 \emph{Jupyter Notebook Viewer XBlock:} From any public Jupyter notebook (e.g., in a public repository on GitHub), pull content into a course learning sequence using the notebook URL (dynamic content). 
-Use optional start and end marks (any string from the first cell to include, and the first cell to exclude) to break long notebook into ?unit-sized? parts. 
+Use optional start and end marks (any string from the first cell to include, and the first cell to exclude) to break long notebook into unit-sized parts. 
 This allows course authors to develop their course content as Jupyter notebooks, and to build learning sequences reusing that content, without duplication. 
 It also has the added benefit that the development of the material can be hosted on a version-controlled repository. (Open edX, itself, doesn't provide version control of course content.)
+Moreover, the full richness of presentation in a Jupyter notebook's rendering is available for display inside the course: formatted equations, syntax-highlighted code, output from computations, data visualizations, etc.
 The code repository for the XBlock is at \url{https://github.com/ibleducation/jupyter-viewer-xblock}, and is open source under a BSD3 license.
 
 \emph{Graded Jupyter Notebook XBlock:} Create an assignment using the \texttt{nbgrader} Jupyter extension, then insert a graded sub-section in Open edX that will deliver this assignment (as a download), auto-grade the student's uploaded solution, and record the student's score in the gradebook. 
