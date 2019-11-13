@@ -1,7 +1,7 @@
 \documentclass[10pt,journal,compsoc]{IEEEtran}
 
 \usepackage{amsmath}
-\usepackage[nocompress]{cite}
+\usepackage{cite}
 \usepackage{color}
 \usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
 \usepackage{stfloats}
@@ -255,7 +255,7 @@ It also has the added benefit that the development of the material can be hosted
 Moreover, the full richness of presentation in a Jupyter notebook's rendering is available for display inside the course: formatted equations, syntax-highlighted code, output from computations, data visualizations, etc.
 The code repository for the XBlock is at \url{https://github.com/ibleducation/jupyter-viewer-xblock}, and is open source under a BSD3 license.
 
-\emph{Graded Jupyter Notebook XBlock:} Create an assignment using the \texttt{nbgrader} Jupyter extension, then insert a graded sub-section in Open edX that will deliver this assignment (as a download), auto-grade the student's uploaded solution, and record the student's score in the gradebook. 
+\emph{Graded Jupyter Notebook XBlock:} Create an assignment using the \texttt{nbgrader} Jupyter extension \cite{hamrick2016,blank2019}, then insert a graded sub-section in Open edX that will deliver this assignment (as a download), auto-grade the student's uploaded solution, and record the student's score in the gradebook. 
 The XBlock instantiates a Docker container with all the required dependencies, runs \texttt{nbgrader} on the student-uploaded notebook, and displays immediate feedback to the student in the form of a score table. 
 The code repository for the XBlock is at \url{https://github.com/ibleducation/jupyter-edx-grader-xblock}, and is open source under a BSD3 license.
 
