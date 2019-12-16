@@ -22,7 +22,7 @@
 \begin{document}
 
 % title
-\title{Engineers Code: re-usable, open educational modules for engineering computations}
+\title{Engineers Code: reusable open learning modules for engineering computations}
 % author names and affiliations
 \author{Lorena A. Barba
 \IEEEcompsocitemizethanks{\IEEEcompsocthanksitem Mechanical and Aerospace Engineering,
@@ -57,11 +57,15 @@ Evaluation efforts on that multi-year curricular innovation support the idea tha
 (In the Georgia Tech experience, it also reduced the success gender gap.) 
 A more recent effort to introduce contextualized computing education in engineering found that it was effective in enabling students to apply computational practices to continue learning in their discipline \cite{magana2016case}. 
 In view of their observations, the authors recommended integrating context-based computing early and often in the engineering curriculum. 
+
 In this paper, I describe an initiative to develop a series of learning modules aimed at integrating computing in the undergraduate engineering curriculum. 
-The modules adopt the context-based format for teaching programming, and are also designed to be re-usable, and shared under standard public licenses (CC-BY for content and BSD-3 for code). 
+The modules adopt the context-based format for teaching programming, and are also designed to be reusable, and shared under standard public licenses (CC-BY for content and BSD-3 for code). 
 We first developed three learning modules---each adding up to about one university credit of work---and taught a second-year engineering course based on this content  in Fall 2017 and Fall 2018. 
-The faculty of the Mechanical and Aerospace Engineering department then approved to create a two-course series in computing, and we used the first two modules for a first-year course in Spring 2019, and started writing two additional learning modules to complete a revised second-year course. 
-We are working with colleagues to develop additional learning modules to use within core engineering courses, aiming to reinforce the ability of students to use computational practices in their discipline. 
+The faculty of the Mechanical and Aerospace Engineering department then approved creating a two-course series in computing, and we used the first two modules for a first-year course in Spring 2019, and started writing two additional learning modules to complete a revised second-year course. 
+We are working with colleagues to develop additional learning modules to use within core engineering courses, aiming to reinforce the ability of students to use computational practices and problem-solving in their discipline. 
+The design patterns we adopted (described in the next section) are the product of many years of teaching computational topics to engineering students, and adopting increasingly popular technologies (especially Jupyter notebooks). 
+We use a hybrid-learning approach, combining an online course platform (Open edX) and auto-grading of student assignments, and active learning in the classroom meetings. 
+This project fully embraces open-source tools and open educational practices, and its goal is to advance innovation in engineering education by integrating computing across the curriculum, disseminating our products broadly, and inviting collaboration.
 
 \section{Key concepts and design principles}
 
@@ -89,7 +93,7 @@ Based on the experience creating and using the CFD Python learning module, and f
 \item Publish openly online
 \end{enumerate}
 
-The \emph{Engineers Code} series of lessons are published as Open Educational Resources (OER): anyone can access, reuse, revise, and redistribute the materials. 
+The \emph{Engineers Code} learning modules are published as Open Educational Resources (OER): anyone can access, reuse, revise, and redistribute the materials. 
 The idea of creating educational materials that are made to be reused goes back twenty five years, and led to the development of content licenses like Creative Commons. 
 Recurring topics in the conversations around OER are the high cost of textbooks, increasing access to content (for worldwide learners), questions of copyright and licenses, and values around altruism and the public good. 
 But arguably OER have not been transformational: various surveys show that faculty for the most part still require that students purchase commercial textbooks, and have little awareness of OER alternatives. 
@@ -109,7 +113,7 @@ It also reflects better how learners consume content today, and how users intera
 Modular content design also enables just-in-time use, whether in support of a longer course, or through informal learning opportunities (e.g., short tutorials, library workshops, peer learning groups). 
 
 In the \emph{Engineers Code} series, each module is designed to comprise about one credit-hour of course work, and take about four or five weeks to complete in regular course scheduling. 
-Each module, in turn, consists of a handful of lessons written as a Jupyter notebook. 
+Each module, in turn, consists of a handful of lessons written as Jupyter notebooks. 
 And each lesson develops a topic through a scaffolded design that takes advantage of the \emph{worked-example effect}: one of the best known and most widely studied of the cognitive load effects. 
 The effect is positive when providing full guidance on how to solve a problem results in better student performance than problem-solving conditions with no guidance. 
 Many studies have shown significant learning improvements with worked examples, compared with free-form problem-solving, for novices learning complex topics.
@@ -248,17 +252,17 @@ Combined with modern pedagogies used in the classroom, like active learning via 
 \bigskip
 
 \noindent \textbf{Summary of the Jupyter XBlocks:}
-Following is a short description of the instructor's experience building a Jupyter-based course in Open edX using our XBlocks:
+Following is a short description of an instructor's experience building a Jupyter-based course in Open edX using our XBlocks:
 \emph{Jupyter Notebook Viewer XBlock:} From any public Jupyter notebook (e.g., in a public repository on GitHub), pull content into a course learning sequence using the notebook URL (dynamic content). 
-Use optional start and end marks (any string from the first cell to include, and the first cell to exclude) to break long notebook into unit-sized parts. 
+Use optional start and end marks (any string from the first cell to include, and the first cell to exclude) to break a long notebook into unit-sized parts. 
 This allows course authors to develop their course content as Jupyter notebooks, and to build learning sequences reusing that content, without duplication. 
 It also has the added benefit that the development of the material can be hosted on a version-controlled repository. (Open edX, itself, doesn't provide version control of course content.)
 Moreover, the full richness of presentation in a Jupyter notebook's rendering is available for display inside the course: formatted equations, syntax-highlighted code, output from computations, data visualizations, etc.
-The code repository for the XBlock is at \url{https://github.com/ibleducation/jupyter-viewer-xblock}, and is open source under a BSD3 license.
+The code repository for the XBlock is at \url{https://github.com/ibleducation/jupyter-viewer-xblock}, and is open source under a BSD-3 license.
 
-\emph{Graded Jupyter Notebook XBlock:} Create an assignment using the \texttt{nbgrader} Jupyter extension \cite{hamrick2016,blank2019}, then insert a graded sub-section in Open edX that will deliver this assignment (as a download), auto-grade the student's uploaded solution, and record the student's score in the gradebook. 
+\emph{Graded Jupyter Notebook XBlock:} An instructor creates an assignment using the \texttt{nbgrader} Jupyter extension \cite{hamrick2016,blank2019}, then can insert a graded sub-section in Open edX that will deliver this assignment (as a download), auto-grade the student's uploaded solution, and record the student's score in the gradebook. 
 The XBlock instantiates a Docker container with all the required dependencies, runs \texttt{nbgrader} on the student-uploaded notebook, and displays immediate feedback to the student in the form of a score table. 
-The code repository for the XBlock is at \url{https://github.com/ibleducation/jupyter-edx-grader-xblock}, and is open source under a BSD3 license.
+The code repository for the XBlock is at \url{https://github.com/ibleducation/jupyter-edx-grader-xblock}, and is open source under a BSD-3 license.
 
 \section{Evaluation}
 
@@ -323,14 +327,19 @@ To achieve it, we created with technical partners the third-party extension (XBl
 We also created an extension to allow auto-grading of student assignments written as Jupyter notebooks. 
 All this technology has been released to the public and is open source. 
 The online modules are also open for anyone to enroll and follow at their own pace, and could even be assigned by other instructors to complement their courses. 
-We know of one instructor at another university who did so, and also have collaborated with the GW Libraries to help them offer Python camps using our first module. 
-They condensed the face-to-face learning to 3 or 4 days, and learners complete the auto-graded assignment after the camp to receive a certificate of completion.
+We know of one instructor at another university who did so, and also have collaborated with the GW Libraries to help them offer Python camps using a combination of our first module and parts of the second. 
+They condensed the face-to-face learning to 3 or 4 days, and learners complete the auto-graded assignment in the online platform (Open edX) after the camp to receive a certificate of completion. 
+These Python camps are in high demand, and the GW Libraries reported that registrations fill all available seats in under 8 hours from announcing the event! 
+Three camps were held in 2019, and the Library plans to continue offering them in 2020. 
+We have also started to support these informal learners, and the learners in the official GW courses, via Study Hall sessions in the Library, staffed by undergraduate student tutors. 
+Our vision is to help coalesce an active learning community in the university for learning foundations of programming in applied contexts. 
 
 \section*{Acknowledgements}
 
 This work received support from grant \#1730170  of the Office of Advanced Cyberinfrastructure (OAC), National Science Foundation. 
 The student surveys and interviews during Fall 2017 were conducted by Tara Lifland, then an instructional designer at the  George Washington University eDesign Shop and \href{http://openedgroup.org/fellowship}{OER Research Fellow} of the Open Education Group. 
 The surveys during the Spring 2019 were conducted by Prof. Ryan Watkins, from the GW School of Graduate Education and Human Development. 
+The GW Libraries Python Camps are led by Megan Potterbusch and Laura Wrubel.
 
 \bigskip
 
