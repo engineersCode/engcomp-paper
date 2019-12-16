@@ -257,12 +257,19 @@ Following is a short description of an instructor's experience building a Jupyte
 Use optional start and end marks (any string from the first cell to include, and the first cell to exclude) to break a long notebook into unit-sized parts. 
 This allows course authors to develop their course content as Jupyter notebooks, and to build learning sequences reusing that content, without duplication. 
 It also has the added benefit that the development of the material can be hosted on a version-controlled repository. (Open edX, itself, doesn't provide version control of course content.)
-Moreover, the full richness of presentation in a Jupyter notebook's rendering is available for display inside the course: formatted equations, syntax-highlighted code, output from computations, data visualizations, etc.
+Moreover, the full richness of presentation in a Jupyter notebook's rendering is available for display inside the course: formatted equations, syntax-highlighted code, output from computations, data visualizations, etc. (See Figure \ref{fig:openex}.)
 The code repository for the XBlock is at \url{https://github.com/ibleducation/jupyter-viewer-xblock}, and is open source under a BSD-3 license.
 
 \emph{Graded Jupyter Notebook XBlock:} An instructor creates an assignment using the \texttt{nbgrader} Jupyter extension \cite{hamrick2016,blank2019}, then can insert a graded sub-section in Open edX that will deliver this assignment (as a download), auto-grade the student's uploaded solution, and record the student's score in the gradebook. 
 The XBlock instantiates a Docker container with all the required dependencies, runs \texttt{nbgrader} on the student-uploaded notebook, and displays immediate feedback to the student in the form of a score table. 
 The code repository for the XBlock is at \url{https://github.com/ibleducation/jupyter-edx-grader-xblock}, and is open source under a BSD-3 license.
+
+\begin{figure*}
+\begin{center}
+\includegraphics[width=0.8\textwidth]{OpenEdXscreenshot.png}
+\caption{Screenshot of Jupyter-based content (from Module 2) displayed in an Open edX learning sequence, showing rich display of code and output.\label{fig:openex}}
+\end{center}
+\end{figure*}
 
 \section{Evaluation}
 
@@ -340,6 +347,9 @@ This work received support from grant \#1730170  of the Office of Advanced Cyber
 The student surveys and interviews during Fall 2017 were conducted by Tara Lifland, then an instructional designer at the  George Washington University eDesign Shop and \href{http://openedgroup.org/fellowship}{OER Research Fellow} of the Open Education Group. 
 The surveys during the Spring 2019 were conducted by Prof. Ryan Watkins, from the GW School of Graduate Education and Human Development. 
 The GW Libraries Python Camps are led by Megan Potterbusch and Laura Wrubel.
+Several graduate students in Barba's group have contributed to her educational initiatives, and the development of learning modules (for this project and its predecessors): Natalia C. Clementi, Pi-Yueh Chuang, Gilbert Forsyth, Olivier Mesnard, and Tingyu Wang.
+With special and heartfelt gratitude towards all the contributors to Project Jupyter and its ecosystem of tools for education. 
+Project Jupyter is a fiscally sponsored project of NumFOCUS (\href{https://numfocus.org}{https://numfocus.org}), a 501(c)(3) US non-profit with a mission to promote open practices in research, data, and scientific computing.
 
 \bigskip
 
